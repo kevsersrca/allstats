@@ -1,0 +1,22 @@
+{{ template "templates/home.html" . }}
+{{ define "content" }}
+    <!-- Preloader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+
+    {{ template "includes/banner.html" . }}  
+
+    {{ template "includes/about.html" . }}
+
+    {{ template "includes/pricing.html" . }}
+
+    {{ template "includes/explore.html" . }}
+
+    {{ template "includes/review.html" . }}
+
+    {{ template "includes/faq.html" . }}
+
+  {{ end }}

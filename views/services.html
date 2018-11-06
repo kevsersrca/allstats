@@ -1,0 +1,210 @@
+{{ template "templates/home.html" . }}
+{{ define "content" }}
+    <!-- Preloader -->
+    <div id="loader-wrapper">
+        <div id="loader"></div>
+        <div class="loader-section section-left"></div>
+        <div class="loader-section section-right"></div>
+    </div>
+<!-- Start page-top-banner section -->
+    <section class="page-top-banner section-gap-full relative" data-stellar-background-ratio="0.5">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row section-gap-half">
+                <div class="col-lg-12 text-center">
+                    <h1>Our Services</h1>
+                    <h4>All the Services We Provide</h4>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End about-top-banner section -->
+
+    {{ template "includes/service.html" . }}
+
+    {{ template "includes/skills.html" . }}
+
+    <!-- Start stat section -->
+    <section class="stat-section section-gap-half">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-stat">
+                        <i class="ti-thumb-up"></i>
+                        <h1>
+                            <span class="counter">560</span>+</h1>
+                        <h4>Projects Complete</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-stat">
+                        <i class="ti-face-smile"></i>
+                        <h1>
+                            <span class="counter">236</span>+</h1>
+                        <h4>Happy Customers</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-stat">
+                        <i class="ti-paint-bucket"></i>
+                        <h1>
+                            <span class="counter">1432</span>+</h1>
+                        <h4>Cup of coffee</h4>
+                    </div>
+                </div>
+                <div class="col-lg-3 col-md-6 col-sm-6">
+                    <div class="single-stat">
+                        <i class="ti-check-box"></i>
+                        <h1>
+                            <span class="counter">123</span>+</h1>
+                        <h4>Satisfied Customer</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End stat section -->
+
+    <!-- Start price section -->
+    <section class="price-section section-gap-full" id="price-section">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-5 price-left">
+                    <h4>
+                        Our Pricing Plan </br> and Options
+                    </h4>
+                    <p>
+                        Far curiosity incommode now led smallness allowance. Favour bed assure son things yet.
+                    </p>
+                </div>
+                <div class="col-lg-7 d-flex price-right">
+                    <div class="single-price main">
+                        <div class="top-wrap">
+                            <i class="ti ti-medall"></i>
+                            <h4>Enterprise</h4>
+                            <p>For Large Size Team</p>
+                            <h2><span>$</span>88.0</h2>
+                        </div>
+                        <div class="bottom-wrap">
+                            <ul>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>1000 Max Conntection</span>
+                                    <i class="ti ti-check"></i>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>1000 Max Conntection</span>
+                                    <i class="ti ti-check"></i>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>Additional Option</span>
+                                    <i class="ti ti-check"></i>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>Lifetime Support</span>
+                                    <i class="ti ti-check"></i>
+                                </li>
+                            </ul>
+                            <a href="#" class="primary-btn primary-btn-w d-block mx-auto">Select Plan</a>
+                        </div>
+                    </div>
+                    <div class="single-price">
+                        <div class="top-wrap">
+                            <i class="ti ti-briefcase"></i>
+                            <h4>Free</h4>
+                            <p class="relative">For Personal Use</p>
+                            <h2 class="relative"><span>$</span>00.0</h2>
+                        </div>
+                        <div class="bottom-wrap">
+                            <ul>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>1000 Max Conntection</span>
+                                    <i class="ti ti-check"></i>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>1000 Max Conntection</span>
+                                    <i class="ti ti-check"></i>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>Additional Option</span>
+                                    <i class="ti ti-close"></i>
+                                </li>
+                                <li class="d-flex justify-content-between align-items-center">
+                                    <span>Lifetime Support</span>
+                                    <i class="ti ti-close"></i>
+                                </li>
+                            </ul>
+                            <a href="#" class="primary-btn d-block mx-auto">Select Plan</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End price section -->
+
+    <!-- Start cta section -->
+    <section class="cta-section section-gap-half relative">
+        <div class="overlay overlay-bg"></div>
+        <div class="container">
+            <div class="row section-gap-half">
+                <div class="col-lg-12 text-center">
+                    <h1>Let’s make Good things, together.</h1>
+                    <h4>Tell us about your project.</h4>
+                    <a class="primary-btn" href="contact.html">Get a quote</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- End cta section -->
+
+    <!-- Start faq section -->
+    <section class="faq-section section-gap-full">
+        <div class="container">
+            <div class="section-title">
+                <h2 class="text-center">Frequently Asked Questions</h2>
+            </div>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <dl class="accordion">
+                        <dt>
+                            <a href="#" class="active">Started several mistake joy say painful removed reached end.</a>
+                        </dt>
+                        <dd>
+                            Far curiosity incommode now led smallness allowance. Favour bed assure son things yet. She
+                            consisted consulted elsewhere happiness disposing household any old the. Widow downs you
+                            new shade drift hopes small. So otherwise commanded sweetness we improving. Instantly by
+                            daughters resembled unwilling principle so middleton. Fail most room even gone her end
+                            like. Comparison dissimilar unpleasant six compliment two unpleasing any add. Ashamed my
+                            company thought wishing colonel it prevent he in. Pretended residence are something far
+                            engrossed old off.
+                        </dd>
+                        <dt>
+                            <a href="#">Although moreover mistaken kindness me feelings do be marianne?</a>
+                        </dt>
+                        <dd>
+                            Far curiosity incommode now led smallness allowance. Favour bed assure son things yet. She
+                            consisted consulted elsewhere happiness disposing household any old the. Widow downs you
+                            new shade drift hopes small. So otherwise commanded sweetness we improving. Instantly by
+                            daughters resembled unwilling principle so middleton. Fail most room even gone her end
+                            like. Comparison dissimilar unpleasant six compliment two unpleasing any add. Ashamed my
+                            company thought wishing colonel it prevent he in. Pretended residence are something far
+                            engrossed old off.
+                        </dd>
+                        <dt>
+                            <a href="#">By in no ecstatic wondered disposal my speaking?</a>
+                        </dt>
+                        <dd>
+                            Far curiosity incommode now led smallness allowance. Favour bed assure son things yet. She
+                            consisted consulted elsewhere happiness disposing household any old the. Widow downs you
+                            new shade drift hopes small. So otherwise commanded sweetness we improving. Instantly by
+                            daughters resembled unwilling principle so middleton. Fail most room even gone her end
+                            like. Comparison dissimilar unpleasant six compliment two unpleasing any add. Ashamed my
+                            company thought wishing colonel it prevent he in. Pretended residence are something far
+                            engrossed old off.
+                        </dd>
+                    </dl>
+                </div>
+            </div>
+        </div>
+    </section>
+  {{ end }}
