@@ -2,6 +2,7 @@ package main
 
 import (
 	_ "allstats/routers"
+	_ "allstats/inits"
 	"github.com/astaxie/beego"
 )
 
@@ -13,4 +14,3 @@ func main() {
 	// beego.BConfig.Listen.EnableHTTPS = true
 	beego.Run()
 }
-

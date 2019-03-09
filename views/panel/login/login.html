@@ -1,0 +1,54 @@
+{{ template "../../templates/home.html" . }}
+{{ define "content" }}
+<body>
+<!-- Preloader -->
+<div id="loader-wrapper">
+    <div id="loader"></div>
+    <div class="loader-section section-left"></div>
+    <div class="loader-section section-right"></div>
+</div>
+<section class="home-faq-section faq-section">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-4"></div>
+            <div class="col-lg-8">
+                <div class="row vertical-offset-75">
+                    <div class="col-md-6 col-md-offset-3">
+                        <div class="panel panel-default">
+                            <div class="panel-body">
+                                <div class="panel-heading">
+                                    <h3 class="panel-title"><strong>Login</strong></h3>
+                                </div>
+                                <form accept-charset="utf-8" role="form" class="form-horizontal" method="POST" action='{{urlfor "LoginController.Login"}}'>
+                                {{ .xsrfdata }}
+
+                                {{template "panel/alert.html" .}}
+
+                                    <div class="form-group">
+                                        <label for="inputEmail">Email Adress</label>
+                                        <div class="col-sm-9">
+                                            <input class="form-control" placeholder="Enter a email : admin@example.com" name="Email" value="{{index .Params "Email"}}" type="email" required id="inputEmail" />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="inputPassword">Password</label>
+                                        <div class="col-sm-9">
+                                            <input class="form-control" placeholder="Enter a Password" name="Password" type="password" value="" required pattern=".{6,}" id="inputPassword"  />
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="col-sm-12">
+                                            <input class="btn btn-lg btn-success" type="submit" value="Login">
+                                        </div>
+                                    </div>
+                                </form>
+                            </div>
+                            <div class="panel-footer text-center clearfix"><a href='{{urlfor "LoginController.Signup"}}'> Sign Up </a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{{ end }}

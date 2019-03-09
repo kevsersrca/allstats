@@ -1,16 +1,11 @@
 package controllers
 
-import (
-	"github.com/astaxie/beego"
-)
 
 type MainController struct {
-	beego.Controller
+	BaseController
 }
 
 func (c *MainController) Index() {
-	c.Data["Website"] = "allstats.in"
-	c.Data["Email"] = "kevser.sirca@gmail.com"
 	c.TplName = "index.html"
 }
 

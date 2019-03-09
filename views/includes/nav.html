@@ -8,7 +8,7 @@
 
                         <!-- Logo -->
                         <a class="nav-brand" href="/index">
-                            </static/img src="/static/img/logo.png" alt="">
+                            <img src="/static/img/logo.png" alt="">
                         </a>
 
                         <!-- Navbar Toggler -->
@@ -43,24 +43,22 @@
                                     <li>
                                         <a href="/services">Services</a>
                                     </li>
-                                    <!--<li>
-                                        <a href="#">Portfolio</a>
-                                        <ul class="dropdown">
-                                            <li><a href="/portfolio">Portfolio</a></li>
-                                        </ul>
-                                    </li>
-                                    <li>
-                                        <a href="#">Blog</a>
-                                        <ul class="dropdown">
-                                            <li><a href="/blog">Blog List</a></li>
-                                        </ul>
-
-                                    </li>-->
                                     <li>
                                         <a href="/contact">Contact</a>
                                     </li>
+                                    {{if .IsLogin }}
+                                     <li>
+                                        <a href="/panel">Panel</a>
+                                    </li>
+                                    {{ else }}
+                                    <li>
+                                        <a href="/login">Login</a>
+                                    </li>
+                                    <li>
+                                        <a href="/signup">Sign Up</a>
+                                    </li>
+                                    {{end}}
                                 </ul>
-
                             </div>
                             <!-- Nav End -->
                         </div>
