@@ -1,1 +1,1 @@
-web: allstats.in
+web: web
