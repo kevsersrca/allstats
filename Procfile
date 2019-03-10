@@ -1,0 +1,1 @@
+web: allstats.in
