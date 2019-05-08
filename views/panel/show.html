@@ -1,0 +1,73 @@
+{{ template "../templates/panel.html" . }}
+{{ define "content" }}
+
+<div class="content">
+    <div class="row">
+    {{if .Count}}
+        <div class="col-12">
+            <div class="card">
+            </div>
+        </div>
+    {{ else}}
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="title">You haven't server.</h4>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                            <section class="center">
+                                <article class="text-center">
+                                    <img src="/static/img/gopher.png" alt="Gopher Face">
+                                </article>
+                                <article class="text-center">
+                                    <p>Now create a server!</p>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createServer">
+                                        Create!
+                                    </button>
+                                </article>
+                            </section>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{end}}
+    </div>
+</div>
+<div class="modal fade" id="createServer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color: #1e1e2f">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="background-color: #1e1e2f">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: whitesmoke;">Server Create</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Create!</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+{{ end }}

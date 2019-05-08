@@ -1,40 +1,39 @@
-<!-- Start screenshot section -->
-    <section class="screenshot-section section-gap-full">
+<section class="contact-section contact-page-section padding-top-120" id="contact-section">
         <div class="container">
-            <div class="section-title">
-                <h2 class="text-center">App Screenshots</h2>
-            </div>
-            <div class="row">
-                <div class="screenshot_slider owl-carousel" id="screenshot-carusel">
-                    <div class="item">
-                        <img src="/static/img/screen/screen.jpg" alt="" title="">
+            <div class="row justify-content-center form-row">
+                <div class="col-lg-3">
+                    <div class="section-title">
+                        <h2 class="text-center">Sign Up Now!</h2>
+                        <p class="text-center">for a free beta account</p>
                     </div>
-                    <div class="item">
-                        <img src="/static/img/screen/screen.jpg" alt="" title="">
-                    </div>
-                    <div class="item">
-                        <img src="/static/img/screen/screen.jpg" alt="" title="">
-                    </div>
-                    <div class="item">
-                        <img src="/static/img/screen/screen.jpg" alt="" title="">
-                    </div>
-                    <div class="item">
-                        <img src="/static/img/screen/screen.jpg" alt="" title="">
-                    </div>
-                    <div class="item">
-                        <img src="/static/img/screen/screen.jpg" alt="" title="">
-                    </div>
-                    <div class="item">
-                        <img src="/static/img/screen/screen.jpg" alt="" title="">
-                    </div>
-                    <div class="item">
-                        <img src="/static/img/screen/screen.jpg" alt="" title="">
-                    </div>
-                    <div class="item">
-                        <img src="/static/img/screen/screen.jpg" alt="" title="">
-                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <form accept-charset="utf-8" role="form" class="form-horizontal" method="POST" action='{{urlfor "LoginController.Signup"}}'>
+                      {{ .xsrfdata }}
+
+                      {{template "panel/alert.html" .}}
+                        <div class="row contact-form-wrap justify-content-center">
+                            <div class="col-md-6 contact-name form-col">
+                                <input class="form-control" placeholder="Username*" name="Name" value="{{index .Params "Name"}}" type="text" required id="inputName" placeholder="Name*"
+                                    onfocus="this.placeholder=''" onblur="this.placeholder='Name*'"/>
+                            </div>
+                            <div class="col-md-6 contact-email form-col">
+                                <input name="Email" id="mail" class="form-control" type="email" placeholder="E-mail*"
+                                    onfocus="this.placeholder=''" onblur="this.placeholder='Email*'">
+                            </div>
+                            <div class="col-md-6 contact-name form-col">
+                                <input class="form-control" placeholder="Password*" name="Password" value="{{index .Params "Name"}}" type="password" required id="inputName" placeholder="Name*"
+                                    onfocus="this.placeholder=''" onblur="this.placeholder='Name*'" required pattern=".{6,}"  id="inputPassword"/>
+                            </div>
+                            <div class="col-md-6 contact-email form-col">
+                                <input name="Repassword" id="mail" class="form-control" type="password" placeholder="Password Confirm*"
+                                    onfocus="this.placeholder=''" onblur="this.placeholder='Email*'" required pattern=".{6,}"  id="inputPassword">
+                            </div>
+                            <input type="submit" class="primary-btn" value="Sign Up Now!" id="submit-message">
+                            <div id="msg" class="message"></div>
+                        </div>
+                    </form>
                 </div>
             </div>
         </div>
     </section>
-    <!-- End screenshot section -->

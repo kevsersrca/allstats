@@ -7,58 +7,43 @@
     <div class="loader-section section-left"></div>
     <div class="loader-section section-right"></div>
 </div>
-<section class="home-faq-section faq-section">
-<div class="container">
-<div class="row">
-    <div class="col-lg-4"></div>
-<div class="col-lg-8">
-    <div class="row vertical-offset-50">
-    	<div class="col-md-6 col-md-offset-3">
-    		<div class="panel panel-default">
-			  	<div class="panel-heading">
-			    	<h3 class="panel-title"><strong>Signup</strong></h3>
-			 	</div> 
-
-			  	<div class="panel-body">
-			    	<form accept-charset="utf-8" role="form" class="form-horizontal" method="POST" action='{{urlfor "LoginController.Signup"}}'>
+<section class="contact-section contact-page-section padding-top-120" id="contact-section">
+        <div class="container">
+            <div class="row justify-content-center form-row">
+                <div class="col-lg-3">
+                    <div class="section-title">
+                        <h2 class="text-center">Sign Up Now!</h2>
+                        <p class="text-center">for a free beta account</p>
+                    </div>
+                </div>
+                <div class="col-lg-9">
+                    <form accept-charset="utf-8" role="form" class="form-horizontal" method="POST" action='{{urlfor "LoginController.Signup"}}'>
                       {{ .xsrfdata }}
 
                       {{template "panel/alert.html" .}}
-                      <div class="form-group">
-                          <label for="inputEmail" class="col-sm-3 control-label">Username</label>
-                          <div class="col-sm-9">
-                              <input class="form-control" placeholder="Enter a user name" name="Name" value="{{index .Params "Name"}}" type="text" required id="inputName" />
-                          </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputEmail" class="col-sm-3 control-label">Email</label>
-                        <div class="col-sm-9">
-                          <input class="form-control" placeholder="admin@example.com" name="Email" value="{{index .Params "Email"}}" type="email" required
-                                    id="inputEmail" />
+                        <div class="row contact-form-wrap justify-content-center">
+                            <div class="col-md-6 contact-name form-col">
+                                <input class="form-control" placeholder="Username*" name="Name" value="{{index .Params "Name"}}" type="text" required id="inputName" placeholder="Name*"
+                                    onfocus="this.placeholder=''" onblur="this.placeholder='Name*'"/>
+                            </div>
+                            <div class="col-md-6 contact-email form-col">
+                                <input name="Email" id="mail" class="form-control" type="email" placeholder="E-mail*"
+                                    onfocus="this.placeholder=''" onblur="this.placeholder='Email*'">
+                            </div>
+                            <div class="col-md-6 contact-name form-col">
+                                <input class="form-control" placeholder="Password*" name="Password" value="{{index .Params "Name"}}" type="password" required id="inputName" placeholder="Name*"
+                                    onfocus="this.placeholder=''" onblur="this.placeholder='Name*'" required pattern=".{6,}"  id="inputPassword"/>
+                            </div>
+                            <div class="col-md-6 contact-email form-col">
+                                <input name="Repassword" id="mail" class="form-control" type="password" placeholder="Password Confirm*"
+                                    onfocus="this.placeholder=''" onblur="this.placeholder='Email*'" required pattern=".{6,}"  id="inputPassword">
+                            </div>
+                            <button class="primary-btn btn-block">Sign Up Now!</button>
                         </div>
-                      </div>
-                      <div class="form-group">
-                        <label for="inputPassword" class="col-sm-3 control-label">Password</label>
-                        <div class="col-sm-9">
-			    		  <input class="form-control" placeholder="Password" name="Password" type="password" value="" required
-                                    pattern=".{6,}"  id="inputPassword"  />
-                          <input class="form-control" placeholder="Password Confirm" name="Repassword" type="password" required
-                                    pattern=".{6,}" />
-                        </div>
-                      </div>
-                      <div class="form-group">
-                        <div class="col-sm-12">
-			    		    <input class="btn btn-lg btn-success" type="submit" value="Sign Up">
-                        </div>
-                      </div>
                     </form>
-			    </div>
-                <div class="panel-footer text-center clearfix"><a href='{{urlfor "LoginController.Login"}}'>Login </a></div>
-			</div>
-		</div>
-	</div>
-</div>
-</div>
-</div>
-</section>
+                </div>
+            </div>
+        </div>
+    </section>
+
 {{ end }}

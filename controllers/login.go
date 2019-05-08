@@ -1,16 +1,15 @@
 package controllers
 
 import (
-	"html/template"
-	"github.com/astaxie/beego"
 	lib "allstats/lib"
 	models "allstats/models"
+	"github.com/astaxie/beego"
+	"html/template"
 )
 
 type LoginController struct {
 	BaseController
 }
-
 
 func (c *LoginController) Login() {
 
@@ -42,7 +41,7 @@ func (c *LoginController) Login() {
 
 	c.SetLogin(user)
 
-	c.Redirect(c.URLFor("UsersController.Index"), 303)
+	c.Redirect(c.URLFor("PanelController.Index"), 303)
 }
 
 func (c *LoginController) Logout() {
@@ -60,6 +59,9 @@ func (c *LoginController) Signup() {
 
 	if !c.Ctx.Input.IsPost() {
 		return
+	}
+	if !c.IsLogin {
+		c.Redirect(c.URLFor("UsersController.Index"), 303)
 	}
 
 	var err error
@@ -89,5 +91,5 @@ func (c *LoginController) Signup() {
 
 	c.SetLogin(u)
 
-	c.Redirect(c.URLFor("UsersController.Index"), 303)
+	c.Redirect(c.URLFor("PanelController.Index"), 303)
 }

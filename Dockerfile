@@ -1,11 +1,27 @@
-FROM golang:1.6
+FROM golang:1.8.1
+MAINTAINER LittleRobot daisukeayanami@gmail.com
 
-# Install beego and the bee dev tool
-RUN go get github.com/astaxie/beego && go get github.com/beego/bee
+ENV GOPATH=/go
+ENV PATH=$GOPATH/bin:$PATH  
 
-# Expose the application on port 8080
-EXPOSE 80
+# Install beego & bee
+RUN go get -u github.com/astaxie/beego
+RUN go get -u github.com/beego/bee
+RUN go get github.com/tools/godep
 
-# Set the entry point of the container to the bee command that runs the
-# application and watches for changes
-CMD ["bee", "run"]
+
+EXPOSE 8080
+
+
+ADD / /go/src/allstats
+
+ADD run.sh /
+
+RUN chmod +x /run.sh
+
+CMD ["/run.sh"]
+
+
+
+
+

@@ -7,7 +7,7 @@
                     <nav class="dope-navbar justify-content-between" id="dopeNav">
 
                         <!-- Logo -->
-                        <a class="nav-brand" href="/index">
+                        <a class="nav-brand" href="/">
                             <img src="/static/img/logo.png" alt="">
                         </a>
 
@@ -34,28 +34,32 @@
                             <!-- Nav Start -->
                             <div class="dopenav">
                                 <ul id="nav">
-                                    <li>
-                                        <a href="/">Home</a>
+                                    
+                                    {{if .IsLogin }}
+                                     <li>
+                                        <a href="/panel">Manage Servers</a>
                                     </li>
+                                     <li>
+                                        <a href="/panel">Account Settings</a>
+                                    </li>
+                                    <li>
+                                        <a href="/logout">Logout</a>
+                                    </li>
+                                    {{ else }}
                                     <li>
                                         <a href="/about">About Us</a>
                                     </li>
                                     <li>
-                                        <a href="/services">Services</a>
+                                        <a href="/services">Features</a>
                                     </li>
                                     <li>
                                         <a href="/contact">Contact</a>
                                     </li>
-                                    {{if .IsLogin }}
-                                     <li>
-                                        <a href="/panel">Panel</a>
-                                    </li>
-                                    {{ else }}
                                     <li>
                                         <a href="/login">Login</a>
                                     </li>
                                     <li>
-                                        <a href="/signup">Sign Up</a>
+                                        <div class="btn btn-danger btn-sm"><a href="/signup">Sign Up</a></div>
                                     </li>
                                     {{end}}
                                 </ul>

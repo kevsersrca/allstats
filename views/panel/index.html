@@ -1,172 +1,72 @@
 {{ template "../templates/panel.html" . }}
 {{ define "content" }}
-<body>
-<!-- Preloader -->
-<div id="loader-wrapper">
-    <div id="loader"></div>
-    <div class="loader-section section-left"></div>
-    <div class="loader-section section-right"></div>
+
+<div class="content">
+    <div class="row">
+        {{if .Count}}
+            <div class="col-12">
+                <div class="card">
+                </div>
+            </div>
+        {{ else}}
+            <div class="col-12">
+                <div class="card">
+                    <div class="card-header">
+                        <h4 class="title">You haven't server.</h4>
+                    </div>
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-md-3"></div>
+                            <div class="col-md-6">
+                                <section class="center">
+                                    <article class="text-center">
+                                        <img src="/static/img/gopher.png" alt="Gopher Face">
+                                    </article>
+                                    <article class="text-center">
+                                        <p>Now create a server!</p>
+                                        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createServer">
+                                            Create!
+                                        </button>
+                                    </article>
+                                </section>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        {{end}}
+    </div>
 </div>
-<section class="charts">
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Line Charts-->
-            <div class="col-lg-8">
-                <div class="line-chart-example card">
-                    <div class="card-close">
-                        <div class="dropdown">
-                            <button type="button" id="closeCard1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                            <div aria-labelledby="closeCard1" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                        </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                        <h3 class="h4">Line Chart Example</h3>
-                    </div>
-                    <div class="card-body">
-                        <canvas id="lineChartExample"></canvas>
-                    </div>
-                </div>
+<div class="modal fade" id="createServer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color: #1e1e2f">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content" style="background-color: #1e1e2f">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel" style="color: whitesmoke;">Server Create</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
             </div>
-            <div class="col-lg-4">
-                <div class="line-chart-example card no-margin-bottom">
-                    <div class="card-close">
-                        <div class="dropdown">
-                            <button type="button" id="closeCard2" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                            <div aria-labelledby="closeCard2" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                        </div>
+            <div class="modal-body">
+                <form action="">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                    <div class="card-header d-flex align-items-center">
-                        <h3 class="h4">Line Chart Example</h3>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                    <div class="card-body">
-                        <canvas id="lineChartExample1"></canvas>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                </div>
-                <div class="line-chart-example card">
-                    <div class="card-close">
-                        <div class="dropdown">
-                            <button type="button" id="closeCard3" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                            <div aria-labelledby="closeCard3" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                        </div>
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
                     </div>
-                    <div class="card-body">
-                        <canvas id="lineChartExample2"></canvas>
-                    </div>
-                </div>
+                </form>
             </div>
-            <!-- Bar Charts-->
-            <div class="col-lg-4">
-                <div class="bar-chart-example card no-margin-bottom">
-                    <div class="card-close">
-                        <div class="dropdown">
-                            <button type="button" id="closeCard4" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                            <div aria-labelledby="closeCard4" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                        </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                        <h3 class="h4">Bar Chart Example</h3>
-                    </div>
-                    <div class="card-body">
-                        <canvas id="barChart1"></canvas>
-                    </div>
-                </div>
-                <div class="line-chart-example card">
-                    <div class="card-close">
-                        <div class="dropdown">
-                            <button type="button" id="closeCard5" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                            <div aria-labelledby="closeCard5" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                        </div>
-                    </div>
-                    <div class="card-body">
-                        <canvas id="barChart2"></canvas>
-                    </div>
-                </div>
-            </div>
-            <div class="col-lg-8">
-                <div class="bar-chart-example card">
-                    <div class="card-close">
-                        <div class="dropdown">
-                            <button type="button" id="closeCard6" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                            <div aria-labelledby="closeCard6" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                        </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                        <h3 class="h4">Bar Chart Example</h3>
-                    </div>
-                    <div class="card-body">
-                        <canvas id="barChartExample"></canvas>
-                    </div>
-                </div>
-            </div>
-            <!-- Doughnut Chart -->
-            <div class="col-lg-6">
-                <div class="pie-chart-example card">
-                    <div class="card-close">
-                        <div class="dropdown">
-                            <button type="button" id="closeCard7" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                            <div aria-labelledby="closeCard7" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                        </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                        <h3 class="h4">Doughnut  Chart Example</h3>
-                    </div>
-                    <div class="card-body">
-                        <canvas id="doughnutChartExample"></canvas>
-                    </div>
-                </div>
-            </div>
-            <!-- Pie Chart -->
-            <div class="col-lg-6">
-                <div class="pie-chart-example card">
-                    <div class="card-close">
-                        <div class="dropdown">
-                            <button type="button" id="closeCard8" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                            <div aria-labelledby="closeCard8" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                        </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                        <h3 class="h4">Pie  Chart Example</h3>
-                    </div>
-                    <div class="card-body">
-                        <canvas id="pieChartExample"></canvas>
-                    </div>
-                </div>
-            </div>
-            <!-- Polar Chart-->
-            <div class="col-lg-6">
-                <div class="polar-chart-example card">
-                    <div class="card-close">
-                        <div class="dropdown">
-                            <button type="button" id="closeCard9" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                            <div aria-labelledby="closeCard9" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                        </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                        <h3 class="h4">Polar Chart Example</h3>
-                    </div>
-                    <div class="card-body">
-                        <canvas id="polarChartExample"></canvas>
-                    </div>
-                </div>
-            </div>
-            <!-- Radar Chart-->
-            <div class="col-lg-6">
-                <div class="radar-chart-example card">
-                    <div class="card-close">
-                        <div class="dropdown">
-                            <button type="button" id="closeCard10" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" class="dropdown-toggle"><i class="fa fa-ellipsis-v"></i></button>
-                            <div aria-labelledby="closeCard10" class="dropdown-menu dropdown-menu-right has-shadow"><a href="#" class="dropdown-item remove"> <i class="fa fa-times"></i>Close</a><a href="#" class="dropdown-item edit"> <i class="fa fa-gear"></i>Edit</a></div>
-                        </div>
-                    </div>
-                    <div class="card-header d-flex align-items-center">
-                        <h3 class="h4">Radar Chart Example</h3>
-                    </div>
-                    <div class="card-body">
-                        <canvas id="radarChartExample"></canvas>
-                    </div>
-                </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Create!</button>
             </div>
         </div>
     </div>
-</section>
+</div>
 {{ end }}
