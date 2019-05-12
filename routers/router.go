@@ -19,13 +19,12 @@ func init() {
 	//Panel
 	beego.Router("/panel", &controllers.PanelController{}, "get:Index")
 	beego.Router("/panel/servers", &controllers.PanelController{}, "get:Servers")
+	beego.Router("/panel/servers/create", &controllers.PanelController{}, "post:Create")
 	beego.Router("/panel/server/:id([0-9]+)", &controllers.PanelController{}, "get:ServerShow")
 	beego.Router("/panel/account", &controllers.PanelController{}, "get:Account")
 	beego.Router("/panel/api", &controllers.PanelController{}, "get:Api")
 
 	//Api
-	beego.Router("/api/create", &controllers.ApiController{}, "post:Create")
-	beego.Router("/api/status", &controllers.ApiController{}, "post:Status")
-	beego.Router("/api/cancel", &controllers.ApiController{}, "post:Cancel")
+	beego.Router("/api/agent.json", &controllers.ApiController{}, "post:Agent")
 
 }

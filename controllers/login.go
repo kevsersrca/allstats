@@ -3,8 +3,9 @@ package controllers
 import (
 	lib "allstats/lib"
 	models "allstats/models"
-	"github.com/astaxie/beego"
 	"html/template"
+
+	"github.com/astaxie/beego"
 )
 
 type LoginController struct {

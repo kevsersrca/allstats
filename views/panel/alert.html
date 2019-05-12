@@ -4,6 +4,7 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Warning:</span>
+            <p>Warning: Something broken...</p>
             {{i18nja (index .flash "warning")}}
         </div>
     {{else if (index .flash "error")}}
@@ -11,6 +12,7 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Error:</span>
+            <p>Warning: Something broken...</p>
             {{i18nja (index .flash "error")}}
         </div>
     {{else if (index .flash "success")}}
@@ -18,6 +20,7 @@
             <button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button>
             <span class="glyphicon glyphicon-exclamation-sign" aria-hidden="true"></span>
             <span class="sr-only">Success:</span>
+            <p>Warning: Something broken...</p>
             {{i18nja (index .flash "success")}}
         </div>
     {{end}}
