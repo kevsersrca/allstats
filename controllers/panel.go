@@ -1,9 +1,10 @@
 package controllers
 
 import (
-	"github.com/astaxie/beego/orm"
 	"allstats/models"
 	"fmt"
+
+	"github.com/astaxie/beego/orm"
 )
 
 type PanelController struct {
@@ -37,6 +38,9 @@ func (c *PanelController) Servers() {
 	c.TplName = "panel/servers.html"
 }
 
+func (c *PanelController) Create() {
+}
+
 func (c *PanelController) ServerShow() {
 	//id, _ := c.GetInt64(":id")
 	c.Data["Count"] = c.Count
@@ -54,6 +58,10 @@ func (c *PanelController) Account() {
 	}
 	c.Data["Title"] = "User Profile"
 	c.TplName = "panel/account.html"
+}
+
+func (c *PanelController) ChangePassword() {
+
 }
 
 func (c *PanelController) Api() {

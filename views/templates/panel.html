@@ -18,6 +18,8 @@
     <link href="/static/css/black-dashboard.css?v=1.0.0" rel="stylesheet" />
     <!-- CSS Just for demo purpose, don't include it in your project -->
     <link href="/static/demo/demo.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/css/bootstrap-slider.min.css" rel="stylesheet" />
+    {{ block "style" . }}{{ end }}
 </head>
 
 <body class="">
@@ -209,6 +211,9 @@
 <script src="/static/js/plugins/bootstrap-notify.js"></script>
 <!-- Control Center for Black Dashboard: parallax effects, scripts for the example pages etc -->
 <script src="/static/js/black-dashboard.min.js?v=1.0.0"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/bootstrap-slider.min.js"></script>
+
+
 <!-- Black Dashboard DEMO methods, don't include it in your project! -->
 <script src="/static/demo/demo.js"></script>
 <script>
@@ -329,6 +334,7 @@
 
     });
 </script>
+{{ block "script" . }}{{ end }}
 </body>
 
 </html>
