@@ -4,7 +4,6 @@ import (
 	"allstats/lib"
 	"allstats/models"
 	"github.com/astaxie/beego/orm"
-	"encoding/json"
 )
 
 type ApiController struct {
@@ -16,21 +15,17 @@ type test_struct struct {
 }
 
 func (c *ApiController) Agent() {
-
-	decoder := json.NewDecoder(c.Ctx.Input.Context.Request.Body)
-
-	var t test_struct
-	err := decoder.Decode(&t)
-	if err != nil {
-		c.Data["json"] = lib.JsonData(false, "Decode error", err.Error())
+	jsoninfo := c.GetStrings("token")
+	if len(jsoninfo) == 0 {
+		c.Data["json"] = lib.JsonData(false, "Null", jsoninfo)
 		c.ServeJSON()
 		return
 	}
 	var task models.Task
-	task.Task = t.Test
+	task.Task = jsoninfo[0]
 	task.Ongoing = true
 	orm.NewOrm().Insert(&task)
-	c.Data["json"] = lib.JsonData(true, "Success", t.Test)
+	c.Data["json"] = lib.JsonData(true, "Success", jsoninfo)
 	c.ServeJSON()
 	return
 
