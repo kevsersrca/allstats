@@ -19,11 +19,13 @@ func (c *ApiController) Agent() {
 		c.ServeJSON()
 		return
 	}
-	task := new(models.Task)
+
+	var task models.Task
 	task.Task = data
 	task.Ongoing = true
-	if _, err := orm.NewOrm().Insert(task); err != nil {
-		c.Data["json"] = lib.JsonData(false, "Task not saved!", err.Error())
+	_, err := orm.NewOrm().Insert(&task)
+	if err != nil {
+		c.Data["json"] = lib.JsonData(false, "Task not saved!")
 		c.ServeJSON()
 		return
 	}
