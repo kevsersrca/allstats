@@ -2,25 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a39c6b1-d115-40be-a952-965b6e84d268" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/static/js/sweetalert.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/flash.tpl" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/lib/json.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allstats" beforeDir="false" afterPath="$PROJECT_DIR$/allstats" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/panel.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/panel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/black-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/black-dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/demo/demo.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/demo/demo.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/black-dashboard.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/black-dashboard.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/vendor/bootstrap.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/vendor/bootstrap.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/js/vendor/popper.min.js" beforeDir="false" afterPath="$PROJECT_DIR$/static/js/vendor/popper.min.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/includes/footer.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/includes/footer.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/panel/account.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/panel/account.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/panel/api.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/panel/api.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/panel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/panel/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/panel/login/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/panel/login/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/panel/servers.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/panel/servers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/panel/show.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/panel/show.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/templates/panel.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/templates/panel.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app.conf" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app.conf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -31,32 +17,32 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="servers.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/panel/servers.html">
+      <file leaf-file-name="api.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/api.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="243">
-              <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+            <state relative-caret-position="388">
+              <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
               <folding>
-                <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+                <element signature="e#21#54#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="panel.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/panel.go">
+      <file leaf-file-name="allstats-agent.sh" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/static/scripts/allstats-agent.sh">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="428">
-              <caret line="115" column="34" selection-start-line="115" selection-start-column="34" selection-end-line="115" selection-end-column="34" />
+            <state relative-caret-position="345">
+              <caret line="221" column="16" selection-start-line="221" selection-start-column="11" selection-end-line="221" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/views/panel/show.html">
+      <file leaf-file-name="router.go" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/routers/router.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="72">
-              <caret line="3" selection-start-line="3" selection-end-line="3" />
+            <state relative-caret-position="552">
+              <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -132,11 +118,8 @@
         <option value="$PROJECT_DIR$/views/panel/login/signup.html" />
         <option value="$PROJECT_DIR$/controllers/login.go" />
         <option value="$PROJECT_DIR$/views/panel/settings.html" />
-        <option value="$PROJECT_DIR$/routers/router.go" />
-        <option value="$PROJECT_DIR$/controllers/api.go" />
         <option value="$PROJECT_DIR$/static/scripts/allstats-install.sh.go" />
         <option value="$PROJECT_DIR$/static/scripts/allstats-install.sh" />
-        <option value="$PROJECT_DIR$/static/scripts/allstats-agent.sh" />
         <option value="$PROJECT_DIR$/views/panel/account.html" />
         <option value="$PROJECT_DIR$/static/js/vendor/bootstrap.min.js" />
         <option value="$PROJECT_DIR$/static/demo/demo.js" />
@@ -154,6 +137,11 @@
         <option value="$PROJECT_DIR$/controllers/panel.go" />
         <option value="$PROJECT_DIR$/views/panel/show.html" />
         <option value="$PROJECT_DIR$/views/panel/servers.html" />
+        <option value="$PROJECT_DIR$/lib/json.go" />
+        <option value="$PROJECT_DIR$/static/scripts/allstats-agent.sh" />
+        <option value="$PROJECT_DIR$/conf/app.conf" />
+        <option value="$PROJECT_DIR$/routers/router.go" />
+        <option value="$PROJECT_DIR$/controllers/api.go" />
       </list>
     </option>
   </component>
@@ -176,12 +164,18 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
               <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
               <item name="allstats" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="allstats" type="462c0819:PsiDirectoryNode" />
+              <item name="conf" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
@@ -196,6 +190,11 @@
             <path>
               <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
               <item name="allstats" type="462c0819:PsiDirectoryNode" />
+              <item name="lib" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
+              <item name="allstats" type="462c0819:PsiDirectoryNode" />
               <item name="models" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -206,25 +205,18 @@
             <path>
               <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
               <item name="allstats" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
               <item name="allstats" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="panel" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allstats" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="templates" type="462c0819:PsiDirectoryNode" />
+              <item name="static" type="462c0819:PsiDirectoryNode" />
+              <item name="scripts" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,14 +270,14 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" weight="0.19027181" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19027181" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49928468" weight="0.3295325" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007153" side_tool="true" weight="0.3295325" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" visible="true" weight="0.1345496" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" weight="0.49258837" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -310,41 +302,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/views/panel/login/signup.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="384">
-          <caret line="31" column="34" selection-start-line="31" selection-start-column="34" selection-end-line="31" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/main.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="264">
-          <caret line="11" column="24" selection-start-line="11" selection-start-column="24" selection-end-line="11" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/scripts/allstats-agent.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="203">
-          <caret line="46" lean-forward="true" selection-start-line="46" selection-end-line="46" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="16" column="33" selection-start-line="16" selection-start-column="33" selection-end-line="16" selection-end-column="33" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/static/scripts/allstats-install.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="3" column="38" selection-start-line="3" selection-start-column="38" selection-end-line="3" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/base.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="310">
@@ -599,17 +556,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/routers/router.go">
+    <entry file="file://$PROJECT_DIR$/views/panel/servers.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="18" column="11" lean-forward="true" selection-start-line="18" selection-start-column="11" selection-end-line="18" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/views/panel/show.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="72">
-          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        <state relative-caret-position="912">
+          <caret line="38" column="43" selection-start-line="38" selection-start-column="43" selection-end-line="38" selection-end-column="43" />
+          <folding>
+            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -620,12 +573,50 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/panel/servers.html">
+    <entry file="file://$PROJECT_DIR$/views/panel/show.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="243">
-          <caret line="35" column="40" selection-start-line="35" selection-start-column="40" selection-end-line="35" selection-end-column="40" />
+        <state relative-caret-position="72">
+          <caret line="3" selection-start-line="3" selection-end-line="3" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/lib/json.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="288">
+          <caret line="12" column="18" lean-forward="true" selection-start-line="12" selection-start-column="18" selection-end-line="12" selection-end-column="18" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/run.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/conf/app.conf">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="144">
+          <caret line="6" column="44" lean-forward="true" selection-start-line="6" selection-start-column="44" selection-end-line="6" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/static/scripts/allstats-agent.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="221" column="16" selection-start-line="221" selection-start-column="11" selection-end-line="221" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/routers/router.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="552">
+          <caret line="27" column="71" selection-start-line="27" selection-start-column="71" selection-end-line="27" selection-end-column="71" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="388">
+          <caret line="24" column="37" lean-forward="true" selection-start-line="24" selection-start-column="37" selection-end-line="24" selection-end-column="37" />
           <folding>
-            <element signature="n#style#0;n#div#0;n#div#0;n#div#0;n#div#1;n#div#0;n#div#1;n#div#0;n#div#0;n#!!top" expanded="true" />
+            <element signature="e#21#54#0" expanded="true" />
           </folding>
         </state>
       </provider>
