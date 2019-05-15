@@ -22,7 +22,7 @@ func init() {
 	beego.Router("/panel/servers/create", &controllers.PanelController{}, "post:Create")
 	beego.Router("/panel/server/:id([0-9]+)", &controllers.PanelController{}, "get:ServerShow")
 	beego.Router("/panel/account", &controllers.PanelController{}, "get:Account")
-	beego.Router("/api", &controllers.PanelController{}, "get:Api")
+	beego.Router("/panel/api", &controllers.PanelController{}, "get:Api")
 
 	//Api
 	beego.Router("/api/agent.json", &controllers.ApiController{}, "get,post:Agent")
