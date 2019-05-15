@@ -18,8 +18,6 @@ func init() {
 	case "prod":
 		orm.RegisterDriver("mysql", orm.DRMySQL)
 		orm.RegisterDataBase(dbname, "mysql", datasource, 30)
-		orm.SetMaxIdleConns(dbname, 100)
-		orm.SetMaxOpenConns(dbname, 100)
 	case "dev":
 		orm.Debug = true
 		fallthrough
