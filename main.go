@@ -7,10 +7,10 @@ import (
 )
 
 func main() {
-	beego.BConfig.Listen.HTTPSCertFile = "/etc/letsencrypt/live/allstats.in/cert.pem"
-	beego.BConfig.Listen.HTTPSKeyFile = "/etc/letsencrypt/live/allstats.in/privkey.pem"
-	// beego.BConfig.Listen.HTTPSAddr = ""
-	// beego.BConfig.Listen.HTTPSPort = 443
-	// beego.BConfig.Listen.EnableHTTPS = true
+	beego.BConfig.Listen.HTTPSCertFile ="cert.pem"
+	beego.BConfig.Listen.HTTPSKeyFile = "key.pem"
+	beego.BConfig.Listen.HTTPSAddr = ""
+	beego.BConfig.Listen.HTTPSPort = 443
+	beego.BConfig.Listen.EnableHTTPS = true
 	beego.Run()
 }
