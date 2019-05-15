@@ -15,7 +15,7 @@ func (c *ApiController) Agent() {
 	auth := c.GetString("token")
 	data := c.GetString("data")
 	if auth == "" {
-		c.Data["json"] = lib.JsonData(false, "Auth required!")
+		c.Data["json"] = lib.JsonData(false, "Auth required!", auth)
 		c.ServeJSON()
 		return
 	}
@@ -25,7 +25,7 @@ func (c *ApiController) Agent() {
 	task.Ongoing = true
 	_, err := orm.NewOrm().Insert(&task)
 	if err != nil {
-		c.Data["json"] = lib.JsonData(false, "Task not saved!")
+		c.Data["json"] = lib.JsonData(false, "Task not saved!", err.Error())
 		c.ServeJSON()
 		return
 	}
