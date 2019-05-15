@@ -23,7 +23,7 @@ func (c *ApiController) Agent() {
 	task.Task = data
 	task.Ongoing = true
 	if _, err := orm.NewOrm().Insert(task); err != nil {
-		c.Data["json"] = lib.JsonData(false, "Task not saved!")
+		c.Data["json"] = lib.JsonData(false, "Task not saved!", err.Error())
 		c.ServeJSON()
 		return
 	}
