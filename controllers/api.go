@@ -15,7 +15,7 @@ type test_struct struct {
 }
 
 func (c *ApiController) Agent() {
-	jsoninfo := c.GetStrings("token")
+	jsoninfo := c.GetStrings("data")
 	if len(jsoninfo) == 0 {
 		c.Data["json"] = lib.JsonData(false, "Null", jsoninfo)
 		c.ServeJSON()
