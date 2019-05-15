@@ -13,7 +13,6 @@ type ApiController struct {
 
 func (c *ApiController) Agent() {
 	auth := c.GetString("token")
-	data := c.GetString("data")
 	if auth == "" {
 		c.Data["json"] = lib.JsonData(false, "Auth required!", auth)
 		c.ServeJSON()
@@ -21,7 +20,7 @@ func (c *ApiController) Agent() {
 	}
 
 	var task models.Task
-	task.Task = data
+	task.Task = auth
 	task.Ongoing = true
 	_, err := orm.NewOrm().Insert(&task)
 	if err != nil {
