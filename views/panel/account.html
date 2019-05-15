@@ -2,8 +2,8 @@
 {{ define "content" }}
 <div class="content">
     <div class="row">
-        <div class="col-md-2"></div>
-        <div class="col-md-8">
+        <div class="col-md-1"></div>
+        <div class="col-md-10">
             <div class="card card-user">
                 <div class="card-body">
                     <p class="card-text">
@@ -16,19 +16,57 @@
                                 <img class="avatar" src="/static/img/team.png" alt="...">
                                 {{ if .Name}}
                                     <h5 class="title">{{ .Name }}</h5>
-                                    <p>Email : {{ .Email}}</p>
                                 {{end}}
                             </a>
-                    <p class="description">
-                        Free Account
-                    </p>
                 </div>
                 </p>
                 <div class="card-description">
-                    <p class="text-center">You have 3 server monitor.
-                        Thank you for interesting :)</p>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card mb-4">
+                                <div class="card-header">
+                                    <b>Account Information</b>
+                                </div>
+                                <div class="list-group" style="margin-top:15%">
+                                    {{ if .Name}}
+                                        <div class="list-group-item text-center text-truncate">
+                                            {{ .Name }} - Free Account
+                                        </div>
+                                        <div class="list-group-item text-center text-truncate">
+                                            {{ .Email }}
+                                        </div>
+                                        <div class="list-group-item text-center text-truncate">
+                                            Phone - None
+                                        </div>
+                                    {{end}}
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-header"><b>Account Features</b></div>
+                                <div class="list-group" style="margin-top:15%">
+                                    <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="mb-0">Account Number :</p>
+                                            <p class="mb-0"><b>-</b></p>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="mb-0">Account Type :</p>
+                                            <p class="mb-0"><b>Individual</b></p>
+                                        </div>
+                                    </div>
+                                    <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                        <div class="d-flex w-100 justify-content-between">
+                                            <p class="mb-0">Status :</p>
+                                            <p class="mb-0"><b>Standart</b></p>
+                                        </div>
+                                    </div>
+                                </div>
+                        </div>
+                    </div>
                 </div>
-            </div>
             <div class="card-footer">
                 <hr>
             </div>
@@ -36,25 +74,25 @@
         </div>
     </div>
     <div class="row">
-            <div class="col-md-2"></div>
-            <div class="col-md-8">
+            <div class="col-md-1"></div>
+            <div class="col-md-10">
                 <div class="card mb-4">
                     <div class="card-header">
                         <b>İşlemler</b>
                     </div>
-                    <div class="card-body pb-2">
+                    <div class="card-body pb-2" style="margin-left: 10%">
                         <div class="row">
-                            <div class="col-md-12">
-                                <button class="btn btn-outline-secondary btn-block mb-4"  data-toggle="modal" data-target="#emailModal">
+                            <div class="col-md-6">
+                                <button class="btn btn-primary mb-4 disabled"  data-toggle="modal" data-target="#emailModal" style="background-color: whitesmoke">
                                     <div class="m-4">
-                                        <h4><i class="icon-ios-email"></i>Change Email Address</h4>
+                                        <h4><i class="icon-ios-email"></i>Update Email Address</h4>
                                     </div>
                                 </button>
-                                <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color: #1e1e2f">
+                                <div class="modal fade" id="emailModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
                                     <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content" style="background-color: #1e1e2f">
+                                        <div class="modal-content" >
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel" style="color: whitesmoke;">Change Email Address</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">Change Email Address</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
@@ -82,17 +120,17 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="col-md-12">
-                                <button class="btn btn-outline-secondary btn-block mb-4" data-toggle="modal" data-target="#passwordModal" >
+                            <div class="col-md-6">
+                                <button class="btn btn-primary mb-4 disabled" data-toggle="modal" data-target="#passwordModal" >
                                     <div class="m-4">
-                                        <h4><i class="icon-ios-email"></i>Change User Password</h4>
+                                        <h4><i class="icon-ios-email"></i>Update User Password</h4>
                                     </div>
                                 </button>
-                                <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color: #1e1e2f">
+                                <div class="modal fade" id="passwordModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
                                     <div class="modal-dialog modal-lg" role="document">
-                                        <div class="modal-content" style="background-color: #1e1e2f">
+                                        <div class="modal-content" >
                                             <div class="modal-header">
-                                                <h5 class="modal-title" id="exampleModalLabel" style="color: whitesmoke;">Change Email Address</h5>
+                                                <h5 class="modal-title" id="exampleModalLabel">Change Email Address</h5>
                                                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                                     <span aria-hidden="true">&times;</span>
                                                 </button>
@@ -120,11 +158,39 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-primary mb-4 disabled"  data-toggle="modal" data-target="#emailModal" style="background-color: whitesmoke">
+                                    <div class="m-4">
+                                        <h4><i class="icon-ios-email"></i>Activate 2FA Protection</h4>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-primary disabled"  data-toggle="modal" data-target="#emailModal" style="background-color: whitesmoke">
+                                    <div class="m-4">
+                                        <h4><i class="icon-ios-email"></i>Update Phone Number</h4>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-primary mb-4 disabled"  data-toggle="modal" data-target="#emailModal" style="background-color: whitesmoke">
+                                    <div class="m-4">
+                                        <h4><i class="icon-ios-email"></i>Update Email Address</h4>
+                                    </div>
+                                </button>
+                            </div>
+                            <div class="col-md-6">
+                                <button class="btn btn-primary mb-4 disabled"  data-toggle="modal" data-target="#emailModal" style="background-color: whitesmoke">
+                                    <div class="m-4">
+                                        <h4><i class="icon-ios-email"></i>View Recent Information</h4>
+                                    </div>
+                                </button>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+    </div>
 </div>
-
 {{ end }}

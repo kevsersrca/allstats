@@ -22,7 +22,7 @@
     {{ block "style" . }}{{ end }}
 </head>
 
-<body class="">
+<body class="white-content">
 <div class="wrapper">
     <div class="sidebar">
         <!--
@@ -36,7 +36,7 @@
                 </a>
             </div>
             <ul class="nav">
-                <li class="active ">
+                <li>
                     <a href="/panel">
                         <i class="tim-icons icon-chart-pie-36"></i>
                         <p>Dashboard</p>
@@ -46,12 +46,6 @@
                     <a href="/panel/servers">
                         <i class="tim-icons icon-atom"></i>
                         <p>Servers</p>
-                    </a>
-                </li>
-                <li>
-                    <a href="/panel/server/1">
-                        <i class="tim-icons icon-pin"></i>
-                        <p>Server 1</p>
                     </a>
                 </li>
                 <li>
@@ -99,7 +93,7 @@
                             <span class="navbar-toggler-bar bar3"></span>
                         </button>
                     </div>
-                    <a class="navbar-brand" href="javascript:void(0)">{{ .Title }}</a>
+                    <a class="navbar-brand" href="javascript:void(0)"><button class="btn btn-light">{{ .Title }}</button></a>
                 </div>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-bar navbar-kebab"></span>
@@ -108,24 +102,24 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navigation">
                     <ul class="navbar-nav ml-auto">
-                        <li class="search-bar input-group">
+                        <!--<li class="search-bar input-group">
                             <button class="btn btn-link" id="search-button" data-toggle="modal" data-target="#searchModal"><i class="tim-icons icon-zoom-split"></i>
                                 <span class="d-lg-none d-md-block">Search</span>
                             </button>
-                        </li>
+                        </li>-->
                         <li class="dropdown nav-item">
                             <a href="javascript:void(0)" class="dropdown-toggle nav-link" data-toggle="dropdown">
-                                <div class="notification d-none d-lg-block d-xl-block"></div>
+                                <div class="notification d-none"></div>
                                 <i class="tim-icons icon-sound-wave"></i>
                                 <p class="d-lg-none">
                                     Notifications
                                 </p>
                             </a>
-                            <ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
+                            <!--<ul class="dropdown-menu dropdown-menu-right dropdown-navbar">
                                 <li class="nav-link">
                                     <a href="#" class="nav-item dropdown-item">Mike John responded to your email</a>
                                 </li>
-                            </ul>
+                            </ul>-->
                         </li>
                         <li class="dropdown nav-item">
                             <a href="#" class="dropdown-toggle nav-link" data-toggle="dropdown">
@@ -198,13 +192,11 @@
     </div>
 </div>
 <!--   Core JS Files   -->
-<script src="/static/js/core/jquery.min.js"></script>
+<script src="/static/js/vendor/jquery-2.2.4.min.js"></script>
 <script src="/static/js/core/popper.min.js"></script>
 <script src="/static/js/core/bootstrap.min.js"></script>
 <script src="/static/js/plugins/perfect-scrollbar.jquery.min.js"></script>
 <!--  Google Maps Plugin    -->
-<!-- Place this tag in your head or just before your close body tag. -->
-<script src="https://maps.googleapis.com/maps/api/js?key=YOUR_KEY_HERE"></script>
 <!-- Chart JS -->
 <script src="/static/js/plugins/chartjs.min.js"></script>
 <!--  Notifications Plugin    -->
@@ -214,8 +206,9 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-slider/10.6.1/bootstrap-slider.min.js"></script>
 
 
-<!-- Black Dashboard DEMO methods, don't include it in your project! -->
 <script src="/static/demo/demo.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@8"></script>
+{{template "flash.tpl" .}}
 <script>
     $(document).ready(function() {
         $().ready(function() {
@@ -329,7 +322,6 @@
 </script>
 <script>
     $(document).ready(function() {
-        // Javascript method's body can be found in assets/js/demos.js
         demo.initDashboardPageCharts();
 
     });

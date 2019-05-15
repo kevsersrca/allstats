@@ -3,15 +3,57 @@
 <div class="content">
     <div class="row">
         <div class="col-12">
-            <div class="card card-chart">
-                <div class="card-header ">
-                    <div class="row"></div>
+            <div class="card">
+                <div class="card-header">
+                    <h4 class="title">API Managment</h4>
                 </div>
-            </div>
-            <div class="card-body">
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-3"></div>
+                        <div class="col-md-6">
+                            <section class="center">
+                                <article class="text-center">
+                                    <h4>Now create a API KEY!</h4>
+                                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createServer">
+                                        Create!
+                                    </button>
+                                </article>
+                            </section>
+                        </div>
+                    </div>
+                    <div class="card-header">
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <b>API KEYS</b>
+                            </div>
+                        </div>
+                    </div>
+                    <table class="table table-full-width table-hover">
+                        <thead class="bg-secondary">
+                        <tr>
+                            <th class="text-center ">API KEY</th>
+                            <th class="text-center">User</th>
+                            <th class="text-center ">Active</th>
+                            <th class="text-center">Date</th>
+                            <th class="text-center">Delete</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        {{range .api}}
+                            <tr>
+                                <td class="text-center "> {{ .Key }}</td>
+                                <td class="text-center "> {{ .User__Name }}</td>
+                                <td class="text-center "> {{ .Active }}</td>
+                                <td class="text-center "> {{ .Created }}</td>
+                                <td class="text-center "> <button class="btn btn-danger btn-sm">Delete</button></td>
+                            </tr>
+                        {{end}}
+                        </tbody>
+                    </table>
+                </div>
+                </div>
             </div>
         </div>
     </div>
 </div>
-
 {{ end }}

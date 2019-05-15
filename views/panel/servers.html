@@ -6,8 +6,58 @@
     {{if .Count}}
         <div class="col-12">
             <div class="card">
+                <div class="card-header"></div>
+                <div class="card-body">
+                    <section class="center">
+                        <article class="text-center">
+                            <h4>Create a Server and now monitor!</h4>
+                            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#createServer">
+                                Create!
+                            </button>
+                        </article>
+                    </section>
+                </div>
             </div>
         </div>
+    {{ range .server}}
+        <div class="col-md-6">
+            <div class="card card-chart">
+                <div class="card-header">
+                    <h5 class="card-category">Durum : {{ .Status}}</h5>
+                    <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i>{{ .Name}}</h3>
+                </div>
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-10">
+                            <div class="list-group" style="margin-top:15%">
+                                <div class="list-group-item list-group-item-action flex-column align-items-start" >
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <p class="mb-0">Ram :</p>
+                                        <p class="mb-0"><b>% {{ .RamLimit}}</b></p>
+                                    </div>
+                                </div>
+                                <div class="list-group-item list-group-item-action flex-column align-item">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <p class="mb-0">Disk :</p>
+                                        <p class="mb-0"><b>% {{ .DiskLimit}}</b></p>
+                                    </div>
+                                </div>
+                                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <p class="mb-0">Load :</p>
+                                        <p class="mb-0"><b>% {{ .Systemlimit}}</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-2" style="margin-top:35%;margin-left: -2%;">
+                            <a href="/panel/server/{{.Id}}"><button class="btn btn-primary btn-sm">Detay</button></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    {{ end}}
     {{ else}}
         <div class="col-12">
             <div class="card">
@@ -37,37 +87,183 @@
     {{end}}
     </div>
 </div>
-<div class="modal fade" id="createServer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" style="background-color: #1e1e2f">
+<div class="modal fade" id="createServer" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true" >
     <div class="modal-dialog modal-lg" role="document">
-        <div class="modal-content" style="background-color: #1e1e2f">
-            <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel" style="color: whitesmoke;">Server Create</h5>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
+        <form action="/panel/servers/create" method="POST">
+            <div class="modal-content" >
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel" >Server Create</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="input-group mb-3">
+                        <input type="text" class="form-control" placeholder="Server Name" aria-label="name" aria-describedby="basic-addon1" name="name">
+                    </div>
+                    <div class="input-group mb-3">
+                        <label>Resource Usage Notification (Percent Values)</label>
+                    </div>
+                    <div class="range-slider">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label>Ram Usage</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="range-slider__range" type="range" value="80" min="0" max="100" name="ramusage">
+                                <span class="range-slider__value">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="range-slider">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label>System Load</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="range-slider__range" type="range" value="80" min="0" max="100" name="loadusage">
+                                <span class="range-slider__value">0</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="range-slider">
+                        <div class="row">
+                            <div class="col-md-2">
+                                <label>Disk Usage</label>
+                            </div>
+                            <div class="col-md-8">
+                                <input class="range-slider__range" type="range" value="80" min="0" max="100" name="diskusage">
+                                <span class="range-slider__value">0</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    <button type="submit" class="btn btn-primary">Create!</button>
+                </div>
             </div>
-            <div class="modal-body">
-                <form action="">
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                    <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1">
-                    </div>
-                </form>
-            </div>
-            <div class="modal-footer">
-                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                <button type="button" class="btn btn-primary">Create!</button>
-            </div>
-        </div>
+        </form>
     </div>
 </div>
+{{ end }}
+
+{{ define "script" }}
+
+<script>
+    var rangeSlider = function(){
+        var slider = $('.range-slider'),
+                range = $('.range-slider__range'),
+                value = $('.range-slider__value');
+
+        slider.each(function(){
+
+            value.each(function(){
+                var value = $(this).prev().attr('value');
+                $(this).html(value);
+            });
+
+            range.on('input', function(){
+                $(this).next(value).html(this.value);
+            });
+        });
+    };
+
+    rangeSlider();
+</script>
+{{ end }}
+
+
+{{ define "style" }}
+<style>
+
+    .range-slider {
+        width: 100%;
+    }
+    .range-slider__range {
+        -webkit-appearance: none;
+        width: calc(100% - (73px));
+        height: 10px;
+        border-radius: 5px;
+        background: #d7dcdf;
+        outline: none;
+        padding: 0;
+        margin: 0;
+    }
+    .range-slider__range::-webkit-slider-thumb {
+        appearance: none;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background: #2c3e50;
+        cursor: pointer;
+        transition: background 0.15s ease-in-out;
+    }
+    .range-slider__range::-webkit-slider-thumb:hover {
+        background: #1abc9c;
+    }
+    .range-slider__range:active::-webkit-slider-thumb {
+        background: #1abc9c;
+    }
+    .range-slider__range::-moz-range-thumb {
+        width: 20px;
+        height: 20px;
+        border: 0;
+        border-radius: 50%;
+        background: #2c3e50;
+        cursor: pointer;
+        transition: background 0.15s ease-in-out;
+    }
+    .range-slider__range::-moz-range-thumb:hover {
+        background: #1abc9c;
+    }
+    .range-slider__range:active::-moz-range-thumb {
+        background: #1abc9c;
+    }
+    .range-slider__range:focus::-webkit-slider-thumb {
+        box-shadow: 0 0 0 3px #fff, 0 0 0 6px #1abc9c;
+    }
+    .range-slider__value {
+        display: inline-block;
+        position: relative;
+        width: 60px;
+        color: #fff;
+        line-height: 20px;
+        text-align: center;
+        border-radius: 3px;
+        background: #2c3e50;
+        padding: 5px 10px;
+        margin-left: 8px;
+    }
+    .range-slider__value:after {
+        position: absolute;
+        top: 8px;
+        left: -7px;
+        width: 0;
+        height: 0;
+        border-top: 7px solid transparent;
+        border-right: 7px solid #2c3e50;
+        border-bottom: 7px solid transparent;
+        content: '';
+    }
+    ::-moz-range-track {
+        background: #d7dcdf;
+        border: 0;
+    }
+    input::-moz-focus-inner, input::-moz-focus-outer {
+        border: 0;
+    }
+    .important{
+        background-color: #c8cfe2;
+        padding: 17px;
+        border: 1px solid #F0E1A1;
+        display: block;
+        margin: 22px;
+        text-align: center;
+        color: #61534e;
+    }
+
+
+</style>
 
 {{ end }}
