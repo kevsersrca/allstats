@@ -26,41 +26,42 @@ type Server struct {
 	Updated          time.Time        `orm:"auto_now;type(datetime)"`
 }
 
-type ServerBwhistory struct {
-	Id      int64     `orm:"auto"`
-	Server  *Server   `orm:"rel(fk)"`
-	Year    uint16    `orm:"uint16(11)"`
-	Month   uint8     `orm:"uint8(11)"`
-	Bwusage uint64    `orm:"int64(11)"`
-	Created time.Time `orm:"auto_now_add;type(datetime)"`
-	Updated time.Time `orm:"auto_now;type(datetime)"`
-}
-type ServerDiskhistory struct {
-	Id      int64     `orm:"auto"`
-	Server  *Server   `orm:"rel(fk)"`
-	Year    uint16    `orm:"uint16(11)"`
-	Month   uint8     `orm:"uint8(11)"`
-	Diskusage uint64    `orm:"int64(11)"`
-	Created time.Time `orm:"auto_now_add;type(datetime)"`
-	Updated time.Time `orm:"auto_now;type(datetime)"`
-}
-type ServerRamhistory struct {
-	Id      int64     `orm:"auto"`
-	Server  *Server   `orm:"rel(fk)"`
-	Year    uint16    `orm:"uint16(11)"`
-	Month   uint8     `orm:"uint8(11)"`
-	Ramusage uint64    `orm:"int64(11)"`
-	Created time.Time `orm:"auto_now_add;type(datetime)"`
-	Updated time.Time `orm:"auto_now;type(datetime)"`
-}
-type ServerCpuhistory struct {
-	Id      int64     `orm:"auto"`
-	Server  *Server   `orm:"rel(fk)"`
-	Year    uint16    `orm:"uint16(11)"`
-	Month   uint8     `orm:"uint8(11)"`
-	Cpuusage uint64    `orm:"int64(11)"`
-	Created time.Time `orm:"auto_now_add;type(datetime)"`
-	Updated time.Time `orm:"auto_now;type(datetime)"`
+type ServerStatics struct {
+	Id      			int64     `orm:"auto"`
+	Version 			[]byte    `orm:"type(text)"`
+	Uptime 				[]byte    `orm:"type(text)"`
+	Sessions			[]byte    `orm:"type(text)"`
+	Processes			[]byte    `orm:"type(text)"`
+	ProcessesArray  	[]byte    `orm:"type(text)"`
+	FileHandles  		[]byte    `orm:"type(text)"`
+	FileHandlesLimit  	[]byte    `orm:"type(text)"`
+	OsKernel  			[]byte    `orm:"type(text)"`
+	OsName  			[]byte    `orm:"type(text)"`
+	OsArch  			[]byte    `orm:"type(text)"`
+	CpuName  			[]byte    `orm:"type(text)"`
+	CpuCores  			[]byte    `orm:"type(text)"`
+	CpuFreq  			[]byte    `orm:"type(text)"`
+	RamTotal  			[]byte    `orm:"type(text)"`
+	RamUsage  			[]byte    `orm:"type(text)"`
+	SwapTotal  			[]byte    `orm:"type(text)"`
+	SwapUsage  			[]byte    `orm:"type(text)"`
+	DiskArray  			[]byte    `orm:"type(text)"`
+	DiskTotal  			[]byte    `orm:"type(text)"`
+	DiskUsage  			[]byte    `orm:"type(text)"`
+	Connections  		[]byte    `orm:"type(text)"`
+	Nic  				[]byte    `orm:"type(text)"`
+	IPV4  				[]byte    `orm:"type(text)"`
+	IPV6  				[]byte    `orm:"type(text)"`
+	Rx  				[]byte    `orm:"type(text)"`
+	Tx  				[]byte    `orm:"type(text)"`
+	RxGap  				[]byte    `orm:"type(text)"`
+	TxGap  				[]byte    `orm:"type(text)"`
+	Load  			[]byte    `orm:"type(text)"`
+	LoadCpu  			[]byte    `orm:"type(text)"`
+	LoadIO  			[]byte    `orm:"type(text)"`
+	PingEu  			[]byte    `orm:"type(text)"`
+	PingUs  			[]byte    `orm:"type(text)"`
+	PingAs  			[]byte    `orm:"type(text)"`
 }
 
 type Task struct {
@@ -74,7 +75,7 @@ type Task struct {
 type Api struct {
 	Id      int64     `orm:"auto"`
 	Key     string    `orm:"size(255)"`
-	Active  bool     `orm:"int8(1)"`
+	Active  bool      `orm:"int8(1)"`
 	User    *User     `orm:"rel(fk)"`
 	Created time.Time `orm:"auto_now_add;type(datetime)"`
 	Updated time.Time `orm:"auto_now;type(datetime)"`
@@ -83,10 +84,7 @@ type Api struct {
 func init() {
 	orm.RegisterModel(
 		new(Server),
-		new(ServerBwhistory),
-		new(ServerDiskhistory),
-		new(ServerCpuhistory),
-		new(ServerRamhistory),
+		new(ServerStatics),
 		new(Task),
 		new(Api),
 	)

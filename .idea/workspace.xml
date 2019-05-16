@@ -2,7 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a39c6b1-d115-40be-a952-965b6e84d268" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/controllers/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/server.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -13,20 +15,20 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="api.go" pinned="false" current-in-tab="true">
+      <file leaf-file-name="api.go" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/controllers/api.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="270">
-              <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+            <state relative-caret-position="348">
+              <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="panel.go" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/controllers/panel.go">
+      <file leaf-file-name="server.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/models/server.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="42" />
+            <state relative-caret-position="247">
+              <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
             </state>
           </provider>
         </entry>
@@ -42,7 +44,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>red</find>
       <find>footer</find>
       <find>../assets/</find>
       <find>static/</find>
@@ -72,6 +73,7 @@
       <find>style</find>
       <find>bool</find>
       <find>User</find>
+      <find>text</find>
     </findStrings>
     <replaceStrings>
       <replace>static/</replace>
@@ -114,7 +116,6 @@
         <option value="$PROJECT_DIR$/views/includes/footer.html" />
         <option value="$PROJECT_DIR$/views/flash.tpl" />
         <option value="$PROJECT_DIR$/views/panel/api.html" />
-        <option value="$PROJECT_DIR$/models/server.go" />
         <option value="$PROJECT_DIR$/views/templates/panel.html" />
         <option value="$PROJECT_DIR$/views/panel/index.html" />
         <option value="$PROJECT_DIR$/controllers/panel.go" />
@@ -126,6 +127,7 @@
         <option value="$PROJECT_DIR$/inits/db.go" />
         <option value="$PROJECT_DIR$/routers/router.go" />
         <option value="$PROJECT_DIR$/controllers/api.go" />
+        <option value="$PROJECT_DIR$/models/server.go" />
       </list>
     </option>
   </component>
@@ -261,7 +263,7 @@
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" visible="true" weight="0.24857469" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" visible="true" weight="0.28392246" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -424,20 +426,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/models/account.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="258">
-          <caret line="63" lean-forward="true" selection-start-line="63" selection-end-line="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/helpers.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="10" column="9" selection-start-line="10" selection-start-column="9" selection-end-line="10" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/../github.com/astaxie/beego/controller.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="189">
@@ -477,13 +465,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="502">
           <caret line="66" column="30" lean-forward="true" selection-start-line="66" selection-start-column="30" selection-end-line="66" selection-end-column="30" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/models/server.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="17" column="15" selection-start-line="17" selection-start-column="4" selection-end-line="17" selection-end-column="15" />
         </state>
       </provider>
     </entry>
@@ -534,11 +515,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/base.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1546" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/inits/db.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-188">
@@ -570,13 +546,6 @@
     <entry file="file://$PROJECT_DIR$/lib/authc.go">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/panel.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="100" column="4" selection-start-line="100" selection-start-column="4" selection-end-line="100" selection-end-column="42" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/routers/router.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
@@ -584,10 +553,45 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/panel.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="77">
+          <caret line="94" column="11" selection-start-line="94" selection-start-column="11" selection-end-line="94" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/base.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="72">
+          <caret line="13" column="23" selection-start-line="13" selection-start-column="23" selection-end-line="13" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/helpers.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="312">
+          <caret line="18" column="37" selection-start-line="18" selection-start-column="37" selection-end-line="18" selection-end-column="37" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/account.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="211">
+          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/api.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="270">
-          <caret line="24" column="26" selection-start-line="24" selection-start-column="26" selection-end-line="24" selection-end-column="26" />
+        <state relative-caret-position="348">
+          <caret line="52" column="16" lean-forward="true" selection-start-line="52" selection-start-column="16" selection-end-line="52" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/models/server.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="48" column="13" selection-start-line="48" selection-start-column="13" selection-end-line="48" selection-end-column="13" />
         </state>
       </provider>
     </entry>
