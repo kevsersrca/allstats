@@ -1,24 +1,19 @@
 package lib
 
 type Master struct {
-	Status  bool        `json:"status"`
-	Message string      `json:"message"`
-	Error   interface{} `json:"error"`
-	Data    interface{} `json:"data"`
+	Status  string        `json:"status"`
+	İnterval string      `json:"interval"`
+	Error   interface{} `json:"errors"`
 }
 
-// Master isimli struct kullanılarak basit standart json nesleleri üretiminde kullanılır
-func JsonData(status bool, message string, data ...interface{}) *Master {
-	IsData := data != nil
+
+func JsonData(status string, interval string) *Master {
 	d := &Master{}
 	d.Status = status
-	if status {
-		d.Message = message
+	if status == "ok" {
+		d.İnterval = interval
 	} else {
-		d.Error = message
-	}
-	if IsData {
-		d.Data = data[0]
+		d.Error = interval
 	}
 	return d
 }

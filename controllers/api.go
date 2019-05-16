@@ -6,6 +6,7 @@ import (
 	"github.com/astaxie/beego/orm"
 	"strings"
 	"encoding/base64"
+	"time"
 )
 
 type ApiController struct {
@@ -20,13 +21,13 @@ func Base64Convert(data string) string{
 func (c *ApiController) Agent() {
 	auth := c.GetString("token")
 	if auth == "" {
-		c.Data["json"] = lib.JsonData(false, "Auth Required!", auth)
+		c.Data["json"] = lib.JsonData("ERROR", "Auth Required!")
 		c.ServeJSON()
 		return
 	}
 	data := c.GetStrings("data")
 	if len(data) == 0 {
-		c.Data["json"] = lib.JsonData(false, "Data Not Found!", data)
+		c.Data["json"] = lib.JsonData("ERROR", "Data Not Found!")
 		c.ServeJSON()
 		return
 	}
@@ -70,7 +71,8 @@ func (c *ApiController) Agent() {
 	statics.PingAs = Base64Convert(datas[33])
 
 	orm.NewOrm().Insert(&statics)
-	c.Data["json"] = lib.JsonData(true, "Success")
+	interval := time.Now().Format(time.RFC850)
+	c.Data["json"] = lib.JsonData("ok", interval)
 	c.ServeJSON()
 	return
 }
