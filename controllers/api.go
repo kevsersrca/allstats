@@ -22,7 +22,7 @@ func (c *ApiController) Agent() {
 		return
 	}
 	var task models.Task
-	task.Task = jsoninfo[1]
+	task.Task = jsoninfo[0]
 	task.Ongoing = true
 	orm.NewOrm().Insert(&task)
 	c.Data["json"] = lib.JsonData(true, "Success", jsoninfo)
