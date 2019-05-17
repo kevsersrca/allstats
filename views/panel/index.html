@@ -24,6 +24,16 @@
                                 </article>
                             </section>
                         </div>
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="title">İnformation for Delete</h4>
+                            </div>
+                            <div class="card-body">
+                                <pre>For delete agent in your server, Following to code</pre>
+                                <code class="important">
+                                    rm -R /etc/allstats && (crontab -u allstats -l | grep -v “/etc/allstats/allstats-agent.sh”) | crontab -u allstats - && userdel allstats
+                                </code>
+                            </div>
                     </div>
                 </div>
             </div>

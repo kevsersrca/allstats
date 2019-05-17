@@ -2,20 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7a39c6b1-d115-40be-a952-965b6e84d268" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/controllers/manage/manage.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/lib/convert.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/views/panel/manage/show.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/allstats" beforeDir="false" afterPath="$PROJECT_DIR$/allstats" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/controllers/panel.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/panel.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/server.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/server.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/static/css/black-dashboard.css" beforeDir="false" afterPath="$PROJECT_DIR$/static/css/black-dashboard.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/flash.tpl" beforeDir="false" afterPath="$PROJECT_DIR$/views/flash.tpl" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/panel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/panel/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/panel/servers.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/panel/servers.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/panel/show.html" beforeDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -26,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="manage.go" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/controllers/manage/manage.go">
+      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/views/panel/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="366">
-              <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+            <state relative-caret-position="299">
+              <caret line="28" column="71" lean-forward="true" selection-start-line="28" selection-start-column="71" selection-end-line="28" selection-end-column="71" />
             </state>
           </provider>
         </entry>
@@ -131,13 +119,13 @@
         <option value="$PROJECT_DIR$/models/manage.go" />
         <option value="$PROJECT_DIR$/models/server.go" />
         <option value="$PROJECT_DIR$/routers/router.go" />
-        <option value="$PROJECT_DIR$/views/panel/index.html" />
         <option value="$PROJECT_DIR$/controllers/api.go" />
         <option value="$PROJECT_DIR$/views/panel/servers.html" />
         <option value="$PROJECT_DIR$/controllers/panel.go" />
         <option value="$PROJECT_DIR$/lib/convert.go" />
         <option value="$PROJECT_DIR$/views/panel/manage/show.html" />
         <option value="$PROJECT_DIR$/controllers/manage/manage.go" />
+        <option value="$PROJECT_DIR$/views/panel/index.html" />
       </list>
     </option>
   </component>
@@ -167,17 +155,6 @@
             <path>
               <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
               <item name="allstats" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allstats" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
-              <item name="allstats" type="462c0819:PsiDirectoryNode" />
-              <item name="controllers" type="462c0819:PsiDirectoryNode" />
-              <item name="manage" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
@@ -494,13 +471,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/views/panel/index.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-186">
-          <caret line="15" column="36" lean-forward="true" selection-start-line="15" selection-start-column="36" selection-end-line="15" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/controllers/login.go">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="372">
@@ -596,8 +566,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/controllers/manage/manage.go">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="366">
-          <caret line="53" column="14" selection-start-line="53" selection-start-column="14" selection-end-line="53" selection-end-column="14" />
+        <state relative-caret-position="486">
+          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/views/panel/index.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="299">
+          <caret line="28" column="71" lean-forward="true" selection-start-line="28" selection-start-column="71" selection-end-line="28" selection-end-column="71" />
         </state>
       </provider>
     </entry>
