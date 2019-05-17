@@ -28,6 +28,7 @@ type Server struct {
 
 type ServerStatics struct {
 	Id      			int64     `orm:"auto"`
+	Server          	*Server   `orm:"rel(fk)"`
 	Version 			string    `orm:"type(text)"`
 	Uptime 				string    `orm:"type(text)"`
 	Sessions			string    `orm:"type(text)"`

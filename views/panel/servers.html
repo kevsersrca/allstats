@@ -19,45 +19,29 @@
                 </div>
             </div>
         </div>
-    {{ range .server}}
-        <div class="col-md-6">
-            <div class="card card-chart">
-                <div class="card-header">
-                    <h5 class="card-category">Durum : {{ .Status}}</h5>
-                    <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i>{{ .Name}}</h3>
-                </div>
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-md-10">
-                            <div class="list-group" style="margin-top:15%">
-                                <div class="list-group-item list-group-item-action flex-column align-items-start" >
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <p class="mb-0">Ram :</p>
-                                        <p class="mb-0"><b>% {{ .RamLimit}}</b></p>
-                                    </div>
-                                </div>
-                                <div class="list-group-item list-group-item-action flex-column align-item">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <p class="mb-0">Disk :</p>
-                                        <p class="mb-0"><b>% {{ .DiskLimit}}</b></p>
-                                    </div>
-                                </div>
-                                <div class="list-group-item list-group-item-action flex-column align-items-start">
-                                    <div class="d-flex w-100 justify-content-between">
-                                        <p class="mb-0">Load :</p>
-                                        <p class="mb-0"><b>% {{ .Systemlimit}}</b></p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="col-md-2" style="margin-top:35%;margin-left: -2%;">
-                            <a href="/panel/server/{{.Id}}"><button class="btn btn-primary btn-sm">Detay</button></a>
-                        </div>
-                    </div>
+    </div>
+        <div class="row">
+            <div class="col-md-5"></div>
+            <div class="col-md-4">
+                <div id="btnContainer">
+                    <button class="btn btn-sm" onclick="listView()"><i class="fa fa-bars"></i> List</button>
+                    <button class="btn btn-sm" onclick="gridView()"><i class="fa fa-th-large"></i> Grid</button>
                 </div>
             </div>
         </div>
-    {{ end}}
+        <div class="row">
+        {{ range .server}}
+            <div class="column col-md-6">
+                <div class="card card-block">
+                    <div class="card-body">
+                        <h5 class="card-category">Durum : {{ .Status}}</h5>
+                        <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i>{{ .Name}}</h3>
+                        <a href="/panel/server/{{.Id}}"><button class="btn btn-primary btn-sm">Detay</button></a>
+                    </div>
+                </div >
+            </div>
+        {{ end}}
+        </div>
     {{ else}}
         <div class="col-12">
             <div class="card">
@@ -99,7 +83,7 @@
                 </div>
                 <div class="modal-body">
                     <div class="input-group mb-3">
-                        <input type="text" class="form-control" placeholder="Server Name" aria-label="name" aria-describedby="basic-addon1" name="name">
+                        <input type="text" class="form-control" placeholder="Server Name" aria-label="name" aria-describedby="basic-addon1" name="name" required>
                     </div>
                     <div class="input-group mb-3">
                         <label>Resource Usage Notification (Percent Values)</label>
@@ -170,6 +154,26 @@
     };
 
     rangeSlider();
+    // Get the elements with class="column"
+    var elements = document.getElementsByClassName("column");
+
+    // Declare a loop variable
+    var i;
+
+    // List View
+    function listView() {
+        for (i = 0; i < elements.length; i++) {
+            elements[i].className = "column col-md-12";
+        }
+    }
+
+    // Grid View
+    function gridView() {
+        for (i = 0; i < elements.length; i++) {
+            elements[i].className = "column col-md-6";
+        }
+    }
+
 </script>
 {{ end }}
 

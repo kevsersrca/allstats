@@ -1,0 +1,358 @@
+{{ template "../../templates/panel.html" . }}
+{{ define "content" }}
+<div class="content">
+    <div class="row">
+        <div class="col-12">
+            <div class="card">
+                <div class="card-header">
+                    <h2> Server : {{ .Title }}</h2>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="card-header"><b>System Features</b></div>
+                            <div class="list-group">
+                                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <p class="mb-0">IPv4 :</p>
+                                        <p class="mb-0"><b>{{ .ipv4}}</b></p>
+                                    </div>
+                                </div>
+                                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <p class="mb-0">IPv6 :</p>
+                                        <p class="mb-0"><b>{{ .ipv6}}</b></p>
+                                    </div>
+                                </div>
+                                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <p class="mb-0">Mac Address :</p>
+                                        <p class="mb-0"><b>{{ .Mac}}</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="list-group" style="margin-top: 7%;">
+                                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <p class="mb-0">Operating System :</p>
+                                        <p class="mb-0"><b>{{ .OS }}</b></p>
+                                    </div>
+                                </div>
+                                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <p class="mb-0">Kernel :</p>
+                                        <p class="mb-0"><b>{{ .Kernel }}</b></p>
+                                    </div>
+                                </div>
+                                <div class="list-group-item list-group-item-action flex-column align-items-start">
+                                    <div class="d-flex w-100 justify-content-between">
+                                        <p class="mb-0">Cpu Model :</p>
+                                        <p class="mb-0"><b>{{ .CpuModel}}</b></p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="tab">
+                        <button class="tablinks active" onclick="openCity(event, 'Overview')">Overview</button>
+                        <button class="tablinks" onclick="openCity(event, 'Network Usage')">Network Usage</button>
+                        <button class="tablinks" onclick="openCity(event, 'Network Latency')">Network Latency</button>
+                        <button class="tablinks" onclick="openCity(event, 'Average Load')">Average Load</button>
+                        <button class="tablinks" onclick="openCity(event, 'Ram&Swap')">Ram & Swap</button>
+                        <button class="tablinks" onclick="openCity(event, 'Disk Usage')">Disk Usage</button>
+                        <button class="tablinks" onclick="openCity(event, 'Top Processes')">Top Processes</button>
+                    </div>
+
+                    <!-- Tab content -->
+                    <div id="Overview" class="tabcontent" style="display: block">
+                        <div class="clearfix"></div>
+                        <div class="row">
+                            <div class="col-md-4">
+                                <div class="card card-chart" style="background-color: #f7f7f7;position: static;height: auto;padding: 30px;">
+                                    <div class="card-header">
+                                        <h4 class="card-category">Average System Load</h4>
+                                        <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i>0% 0.00 0.00 0.00</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 0%;" aria-valuenow="0" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <br>
+                                        <p><i class="tim-icons icon-atom"></i>No historical data available yet</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card card-chart" style="background-color: #f7f7f7;position: static;height: auto;padding: 30px;">
+                                    <div class="card-header">
+                                        <h4 class="card-category">Current RAM usage</h4>
+                                        <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> 351.8 MB of 986 MB</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <br>
+                                        <p><i class="tim-icons icon-atom"></i>No historical data available yet</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-4">
+                                <div class="card card-chart" style="background-color: #f7f7f7;position: static;height: auto;padding: 30px;">
+                                    <div class="card-header">
+                                        <h5 class="card-category">Overall disk usage</h5>
+                                        <h3 class="card-title"><i class="tim-icons icon-bell-55 text-primary"></i> 3.4 GB of 24 GB</h3>
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="progress">
+                                            <div class="progress-bar" role="progressbar" style="width: 5%;" aria-valuenow="10" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                        <br>
+                                        <p><i class="tim-icons icon-atom"></i>No historical data available yet</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Network Usage" class="tabcontent" style="display: none">
+                        <h3>Network Usage</h3>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <canvas id="line-chart" width="800" height="450"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Network Latency" class="tabcontent" style="display: none">
+                        <h3>Network Latency</h3>
+                        <div class="row">
+                            <div class="col-md-2"></div>
+                            <div class="col-md-8">
+                                <canvas id="line-chart1" width="800" height="450"></canvas>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="Average Load" class="tabcontent" style="display: none">
+                        <h3>Average Load</h3>
+                        <canvas id="line-chart2" width="800" height="450"></canvas>
+                    </div>
+
+                    <div id="Ram&Swap" class="tabcontent" style="display: none">
+                        <h3>Ram & Swap</h3>
+                        <canvas id="line-chart3" width="800" height="450"></canvas>
+                    </div>
+
+                    <div id="Disk Usage" class="tabcontent" style="display: none">
+                        <h3>Disk Usage</h3>
+                        <canvas id="line-chart4" width="800" height="450"></canvas>
+                    </div>
+
+                    <div id="Top Processes" class="tabcontent" style="display: none">
+                        <h3>Top Processes</h3>
+                        <table class="table table-full-width table-hover">
+                            <thead class="bg-secondary">
+                            <tr>
+                                <th class="text-center " colspan="4">User CPU Memory Process</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            {{range $key, $val := .s}}
+                            <tr>
+                                <td class="text-center " colspan="4"> {{ $val }}</td>
+                            </tr>
+                            {{end}}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{{ end }}
+{{ define "script"}}
+<script>
+    function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+            tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+            tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+    }
+    new Chart(document.getElementById("line-chart"), {
+        type: 'line',
+        data: {
+            datasets: [{
+                data: {{ .Data1 }},
+                label: "RX",
+                borderColor: "#3e95cd",
+                fill: false
+            }, {
+                data: {{ .Data2 }},
+                label: "TX",
+                borderColor: "#8e5ea2",
+                fill: false
+            },
+            ]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Network Usage on eth0 (MB)'
+            }
+        }
+    });
+
+    new Chart(document.getElementById("line-chart1"), {
+        type: 'line',
+        data: {
+            datasets: [{
+                data: {{ .Data3 }},
+                label: "Asia",
+                borderColor: "#3e95cd",
+                fill: false
+            }, {
+                data: {{ .Data4 }},
+                label: "USA",
+                borderColor: "#8e5ea2",
+                fill: false
+            },{
+                data: {{ .Data5 }},
+                label: "Europa",
+                borderColor: "#8e5ea2",
+                fill: false
+            },
+            ]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Latency to Europe, USA & Asia'
+            }
+        }
+    });
+
+    new Chart(document.getElementById("line-chart2"), {
+        type: 'line',
+        data: {
+            datasets: [{
+                data: {{ .Data6 }},
+                label: "System",
+                borderColor: "#3e95cd",
+                fill: false
+            }, {
+                data: {{ .Data7 }},
+                label: "CPU",
+                borderColor: "#8e5ea2",
+                fill: false
+            },{
+                data: {{ .Data8 }},
+                label: "Disk/IO",
+                borderColor: "#8e5ea2",
+                fill: false
+            },
+            ]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Average Load with CPU & Disk IO'
+            }
+        }
+    });
+    new Chart(document.getElementById("line-chart3"), {
+        type: 'line',
+        data: {
+            datasets: [{
+                data: {{ .Data9 }},
+                label: "Ram",
+                borderColor: "#3e95cd",
+                fill: false
+            }, {
+                data: {{ .Data10 }},
+                label: "Swap",
+                borderColor: "#8e5ea2",
+                fill: false
+            },]
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'RAM & SWAP (MB)'
+            }
+        }
+    });
+    new Chart(document.getElementById("line-chart4"), {
+        type: 'pie',
+        data: {
+            datasets: [{
+                label: "Unused",
+                backgroundColor: ["#8e5ea2"],
+                data: [21.6],
+            }],
+            datasets: [{
+                label: "Usage",
+                backgroundColor: ["#3e95cd"],
+                data: [3.4],
+            }],
+        },
+        options: {
+            title: {
+                display: true,
+                text: 'Disk Usage in Total (MB)'
+            }
+        }
+    });
+</script>
+{{ end}}
+{{ define "style"}}
+<style>
+
+    /* Style the tab */
+    .tab {
+        overflow: hidden;
+        border: 1px solid #ccc;
+    }
+
+    /* Style the buttons inside the tab */
+    .tab button {
+        background-color: inherit;
+        float: left;
+        border: none;
+        outline: none;
+        cursor: pointer;
+        padding: 14px 16px;
+        transition: 0.3s;
+        font-size: 17px;
+    }
+
+    /* Change background color of buttons on hover */
+    .tab button:hover {
+        background-color: #ddd;
+    }
+
+    /* Create an active/current tablink class */
+    .tab button.active {
+        background-color: #ccc;
+    }
+
+    /* Style the tab content */
+    .tabcontent {
+        display: none;
+        padding: 6px 12px;
+        border: 1px solid #ccc;
+        border-top: none;
+    }
+</style>
+{{end}}

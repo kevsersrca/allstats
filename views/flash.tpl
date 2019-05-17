@@ -11,7 +11,28 @@
     </script>
   {{else if .flash.warning}}
     <script>
-      swal("Notice!", "{{.flash.warning}}", "warning");
+      let timerInterval
+      Swal.fire({
+        title: 'Server is not responding',
+        html: 'Next update in <strong></strong> seconds.',
+        timer: 180000,
+        onBeforeOpen: () => {
+          Swal.showLoading()
+          timerInterval = setInterval(() => {
+            Swal.getContent().querySelector('strong')
+              .textContent = Swal.getTimerLeft()
+          }, 100)
+        },
+        onClose: () => {
+          clearInterval(timerInterval)
+        }
+      }).then((result) => {
+        if (
+          result.dismiss === Swal.DismissReason.timer
+        ) {
+          console.log('I was closed by the timer')
+        }
+      })
     </script>
   {{else if .flash.error}}
     <script>

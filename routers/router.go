@@ -4,6 +4,7 @@ import (
 	"allstats/controllers"
 
 	"github.com/astaxie/beego"
+	"allstats/controllers/manage"
 )
 
 func init() {
@@ -20,7 +21,7 @@ func init() {
 	beego.Router("/panel", &controllers.PanelController{}, "get:Index")
 	beego.Router("/panel/servers", &controllers.PanelController{}, "get:Servers")
 	beego.Router("/panel/servers/create", &controllers.PanelController{}, "post:Create")
-	beego.Router("/panel/server/:id([0-9]+)", &controllers.PanelController{}, "get:ServerShow")
+	beego.Router("/panel/server/:id([0-9]+)", &manage.ManageController{}, "get:Show")
 	beego.Router("/panel/account", &controllers.PanelController{}, "get:Account")
 	beego.Router("/panel/api", &controllers.PanelController{}, "get:Api")
 

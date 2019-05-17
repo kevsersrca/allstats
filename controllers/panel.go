@@ -13,6 +13,14 @@ type PanelController struct {
 	Count bool
 }
 
+func (c *PanelController) NestPrepare() {
+	if !c.IsLogin {
+		if c.Ctx.Input.URI() != c.URLFor("LoginController.Login") {
+			c.Ctx.SetCookie("LoginReturnUrl", c.Ctx.Input.URI(), 0, "/")
+		}
+		c.Redirect(c.URLFor("LoginController.Login"), 302)
+	}
+}
 
 func (c *PanelController) IsServerCount() {
 	u := &models.User{Id: c.Userinfo.Id}
@@ -25,9 +33,6 @@ func (c *PanelController) IsServerCount() {
 }
 
 func (c *PanelController) Index() {
-	if !c.IsLogin {
-		c.Ctx.Redirect(302, c.URLFor("LoginController.Login"))
-	}
 	c.IsServerCount()
 	c.Data["Title"] = "Dashboard"
 	c.Data["Count"] = c.Count
@@ -60,9 +65,6 @@ func RandomHash(length int) string {
 }
 
 func (c *PanelController) Servers() {
-	if !c.IsLogin {
-		c.Ctx.Redirect(302, c.URLFor("LoginController.Login"))
-	}
 	c.IsServerCount()
 	flash := beego.NewFlash()
 	o := orm.NewOrm().QueryTable("Server").Filter("Account", c.Userinfo)
@@ -81,9 +83,6 @@ func (c *PanelController) Servers() {
 }
 
 func (c *PanelController) Create() {
-	if !c.IsLogin {
-		c.Ctx.Redirect(302, c.URLFor("LoginController.Login"))
-	}
 	c.IsServerCount()
 	c.Data["Title"] = "Servers"
 	c.Data["Count"] = c.Count
@@ -110,17 +109,7 @@ func (c *PanelController) Create() {
 	return
 }
 
-func (c *PanelController) ServerShow() {
-	id := c.GetString(":id")
-	c.Data["Count"] = c.Count
-	c.Data["Title"] = "Server "+id
-	c.TplName = "panel/show.html"
-}
-
 func (c *PanelController) Account() {
-	if !c.IsLogin {
-		c.Ctx.Redirect(302, c.URLFor("LoginController.Login"))
-	}
 	User := &models.User{Id: c.Userinfo.Id}
 	if err := orm.NewOrm().Read(User); err == nil {
 		c.Data["Name"] = User.Name
@@ -138,9 +127,6 @@ func (c *PanelController) ChangePassword() {
 }
 
 func (c *PanelController) Api() {
-	if !c.IsLogin {
-		c.Ctx.Redirect(302, c.URLFor("LoginController.Login"))
-	}
 	c.TplName = "panel/api.html"
 	flash := beego.NewFlash()
 	o := orm.NewOrm().QueryTable("Api").Filter("User", c.Userinfo)

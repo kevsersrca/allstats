@@ -71,7 +71,9 @@ func (c *ApiController) Agent() {
 	statics.PingAs = Base64Convert(datas[33])
 
 	orm.NewOrm().Insert(&statics)
-	interval := time.Now().Format(time.RFC850)
+	t := time.Now()
+	interval :=t.Format("20060102150405")
+
 	c.Data["json"] = lib.JsonData("ok", interval)
 	c.ServeJSON()
 	return
