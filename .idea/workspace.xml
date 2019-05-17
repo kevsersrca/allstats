@@ -3,7 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7a39c6b1-d115-40be-a952-965b6e84d268" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/panel/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/views/panel/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/controllers/api.go" beforeDir="false" afterPath="$PROJECT_DIR$/controllers/api.go" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -14,11 +14,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/views/panel/index.html">
+      <file leaf-file-name="api.go" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/controllers/api.go">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="299">
-              <caret line="28" column="71" lean-forward="true" selection-start-line="28" selection-start-column="71" selection-end-line="28" selection-end-column="71" />
+            <state relative-caret-position="218">
+              <caret line="74" column="80" selection-start-line="74" selection-start-column="80" selection-end-line="74" selection-end-column="80" />
             </state>
           </provider>
         </entry>
@@ -119,13 +119,13 @@
         <option value="$PROJECT_DIR$/models/manage.go" />
         <option value="$PROJECT_DIR$/models/server.go" />
         <option value="$PROJECT_DIR$/routers/router.go" />
-        <option value="$PROJECT_DIR$/controllers/api.go" />
         <option value="$PROJECT_DIR$/views/panel/servers.html" />
         <option value="$PROJECT_DIR$/controllers/panel.go" />
         <option value="$PROJECT_DIR$/lib/convert.go" />
         <option value="$PROJECT_DIR$/views/panel/manage/show.html" />
         <option value="$PROJECT_DIR$/controllers/manage/manage.go" />
         <option value="$PROJECT_DIR$/views/panel/index.html" />
+        <option value="$PROJECT_DIR$/controllers/api.go" />
       </list>
     </option>
   </component>
@@ -159,13 +159,13 @@
             <path>
               <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
               <item name="allstats" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="allstats" type="b2602c69:ProjectViewProjectNode" />
               <item name="allstats" type="462c0819:PsiDirectoryNode" />
-              <item name="views" type="462c0819:PsiDirectoryNode" />
-              <item name="panel" type="462c0819:PsiDirectoryNode" />
+              <item name="controllers" type="462c0819:PsiDirectoryNode" />
+              <item name="manage" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -224,21 +224,21 @@
     <frame x="0" y="0" width="1440" height="900" extended-state="0" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.20100144" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.20386267" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49928468" weight="0.3295325" />
       <window_info anchor="bottom" id="Event Log" order="7" sideWeight="0.5007153" side_tool="true" weight="0.3295325" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Run" order="2" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" visible="true" weight="0.25313568" />
+      <window_info anchor="bottom" id="Terminal" order="7" sideWeight="0.49928468" visible="true" weight="0.25313568" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3295325" />
@@ -525,18 +525,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="431">
           <caret line="99" column="42" selection-start-line="99" selection-start-column="42" selection-end-line="99" selection-end-column="42" />
-          <folding>
-            <element signature="n#!!block;n#IsServerCount#0" />
-            <element signature="n#!!block;n#Index#0" />
-            <element signature="n#!!block;n#RandomHash#0" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/api.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1656">
-          <caret line="76" column="49" lean-forward="true" selection-start-line="76" selection-start-column="49" selection-end-line="76" selection-end-column="49" />
         </state>
       </provider>
     </entry>
@@ -551,30 +539,27 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="263">
           <caret line="221" column="14" selection-start-line="221" selection-start-column="14" selection-end-line="221" selection-end-column="14" />
-          <folding>
-            <element signature="e#189#3397#0#HTML" />
-            <element signature="e#3458#4292#0#HTML" />
-            <element signature="e#4355#7999#0#HTML" />
-            <element signature="e#8021#8467#0#HTML" />
-            <element signature="e#8489#8940#0#HTML" />
-            <element signature="e#8962#9183#0#HTML" />
-            <element signature="e#9205#9420#0#HTML" />
-            <element signature="e#9442#9659#0#HTML" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/controllers/manage/manage.go">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="486">
-          <caret line="58" column="23" lean-forward="true" selection-start-line="58" selection-start-column="23" selection-end-line="58" selection-end-column="23" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/views/panel/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="299">
-          <caret line="28" column="71" lean-forward="true" selection-start-line="28" selection-start-column="71" selection-end-line="28" selection-end-column="71" />
+        <state relative-caret-position="203">
+          <caret line="24" column="6" selection-start-line="24" selection-start-column="6" selection-end-line="24" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/manage/manage.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="325">
+          <caret line="32" column="5" lean-forward="true" selection-start-line="32" selection-start-column="5" selection-end-line="32" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/controllers/api.go">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="218">
+          <caret line="74" column="80" selection-start-line="74" selection-start-column="80" selection-end-line="74" selection-end-column="80" />
         </state>
       </provider>
     </entry>

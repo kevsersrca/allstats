@@ -7,6 +7,7 @@ import (
 	"strings"
 	"encoding/base64"
 	"time"
+	"github.com/astaxie/beego"
 )
 
 type ApiController struct {
@@ -69,6 +70,14 @@ func (c *ApiController) Agent() {
 	statics.PingEu = Base64Convert(datas[31])
 	statics.PingUs = Base64Convert(datas[32])
 	statics.PingAs = Base64Convert(datas[33])
+
+	Servers := &models.Server{}
+	_, err := orm.NewOrm().QueryTable("Server").Filter("Id", c.Userinfo.Id).All(Servers)
+	if err != nil{
+		beego.Error("Server not found error!")
+		return
+	}
+	statics.Server = Servers
 
 	orm.NewOrm().Insert(&statics)
 	t := time.Now()
