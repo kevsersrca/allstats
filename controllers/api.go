@@ -72,7 +72,7 @@ func (c *ApiController) Agent() {
 	statics.PingAs = Base64Convert(datas[33])
 
 	Servers := &models.Server{}
-	err := orm.NewOrm().QueryTable("Server").Filter("Id", c.Userinfo.Id).One(&Servers)
+	err := orm.NewOrm().QueryTable("Server").Filter("Uuid", auth).One(&Servers)
 	if err != nil{
 		beego.Error("Server not found error!")
 		return
